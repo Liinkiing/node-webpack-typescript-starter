@@ -1,0 +1,36 @@
+{
+  "name": "node-webpack-typescript-starter",
+  "version": "1.0.0",
+  "description": "A simple Webpack starter to starts writing Node applications with Typescript",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Liinkiing/node-webpack-typescript-starter",
+  "author": "Omar Jbara <omar.jbara2@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "typescript",
+    "template",
+    "starter",
+    "boilerplate",
+    "node"
+  ],
+  "scripts": {
+    "prestart": "yarn build",
+    "start": "node build/index.js",
+    "dev": "nodemon",
+    "build": "webpack --colors",
+    "build:watch": "webpack --colors --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.11",
+    "@types/webpack": "^4.41.0",
+    "nodemon": "^2.0.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
