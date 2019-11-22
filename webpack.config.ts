@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+import {TsconfigPathsPlugin} from 'tsconfig-paths-webpack-plugin'
 
 type NodeEnv = "development" | "production" | "none"
 
@@ -21,9 +22,7 @@ const config: webpack.Configuration = {
     ]
   },
   resolve: {
-    alias: {
-      '~': path.resolve(__dirname, 'src'),
-    },
+    plugins: [new TsconfigPathsPlugin()],
     extensions: ['.ts', '.js'],
   }
 };
