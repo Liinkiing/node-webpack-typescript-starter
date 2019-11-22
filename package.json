@@ -16,15 +16,16 @@
   ],
   "scripts": {
     "prestart": "yarn build",
-    "start": "node build/index.js",
+    "start": "node -r dotenv/config build/index.js",
     "dev": "nodemon",
     "build": "webpack --colors",
     "build:watch": "webpack --colors --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "@types/express": "^4.17.2",
-    "@types/node": "^12.12.11",
     "@types/webpack": "^4.41.0",
     "nodemon": "^2.0.0",
     "ts-loader": "^6.2.1",

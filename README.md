@@ -32,3 +32,10 @@ declare module 'foo' {
 ```
 
 Because the `@types` directory is declared in `typeRoots`, Typescript will no longer complain if you imported your package with missing types
+
+## process.env and related typings
+This starter is using [Dotenv](https://github.com/motdotla/dotenv) to handle in-developpement secrets.  
+It includes a `.env.sample` which **SHOULD** be committed. It's an example file and does not contains any sensitive data. You must copy it and rename it to **.env**.
+This one is ignored.  
+By using Typescript's [merging interfaces capability](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces), it also comes by default with `process.env` types safety. You can type them under `src/@types/node/index.d.ts` 
+and have all the nice autocompletion!
