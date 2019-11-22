@@ -1,4 +1,4 @@
-import {Logger} from '~/services/Logger'
+import { Logger } from '~/services/Logger'
 
 const t = new Logger()
 t.logSuperSecret()

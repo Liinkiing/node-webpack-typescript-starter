@@ -39,3 +39,7 @@ It includes a `.env.sample` which **SHOULD** be committed. It's an example file 
 This one is ignored.  
 By using Typescript's [merging interfaces capability](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces), it also comes by default with `process.env` types safety. You can type them under `src/@types/node/index.d.ts` 
 and have all the nice autocompletion!
+
+## Tooling
+The template includes [Prettier](https://prettier.io/), [ESLint](https://eslint.org/) (with [Typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)), [Babel](https://babeljs.io/) and [Husky](https://github.com/typicode/husky).
+All their related configurations are in the `*rc` files.
