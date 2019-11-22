@@ -6,6 +6,8 @@
       "dom",
       "es6"
     ],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "allowJs": true,
     "outDir": "build",
     "rootDir": "./",
