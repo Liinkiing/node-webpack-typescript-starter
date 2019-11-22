@@ -16,7 +16,7 @@ It means that you only have to setup your aliases in the `tsconfig.json`, it's y
 
 ## @types and extending modules
 It also includes a `@types` directory under **src**, so you can easily 
-separe your types or extends some external modules. They are also included in the `tsconfig.json`
+separate your types or extends some external modules. They are also included in the `tsconfig.json`
 For example, if some package named `foo` does not have any types in [DefinitelyTyped](https://definitelytyped.org/), you could 
 add a `index.d.ts` under `src/@types/foo/index.d.ts`. It is just my personnal convention, so do as you want!
 
