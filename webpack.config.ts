@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import {TsconfigPathsPlugin} from 'tsconfig-paths-webpack-plugin'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 type NodeEnv = "development" | "production" | "none"
 
@@ -24,7 +25,12 @@ const config: webpack.Configuration = {
   resolve: {
     plugins: [new TsconfigPathsPlugin()],
     extensions: ['.ts', '.js'],
-  }
+  },
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      eslint: true
+    })
+  ]
 };
 
 export default config;
