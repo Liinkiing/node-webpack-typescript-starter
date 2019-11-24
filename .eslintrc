@@ -17,6 +17,6 @@
     "@typescript-eslint/eslint-plugin"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off" // Prefer using compilerOptions of TS when possible
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }
