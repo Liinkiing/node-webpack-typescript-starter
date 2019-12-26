@@ -1,8 +1,6 @@
 {
-  "watch": [
-    "src"
-  ],
+  "watch": ["src"],
   "ext": ".ts,.js",
   "ignore": ["./webpack.config.ts"],
-  "exec": "ts-node -r tsconfig-paths/register -r dotenv/config ./src/index.ts"
+  "exec": "ts-node -r tsconfig-paths/register -r dotenv-flow/config ./src/index.ts"
 }
