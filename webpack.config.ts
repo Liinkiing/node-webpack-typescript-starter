@@ -1,9 +1,9 @@
-import path from 'path';
-import webpack from 'webpack';
-import {TsconfigPathsPlugin} from 'tsconfig-paths-webpack-plugin'
+import path from 'path'
+import webpack from 'webpack'
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
-type NodeEnv = "development" | "production" | "none"
+type NodeEnv = 'development' | 'production' | 'none'
 
 const config: webpack.Configuration = {
   entry: './src/index.ts',
@@ -11,16 +11,16 @@ const config: webpack.Configuration = {
   target: 'node',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'index.js'
+    filename: 'index.js',
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: ['babel-loader', 'eslint-loader'],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
-    ]
+    ],
   },
   resolve: {
     plugins: [new TsconfigPathsPlugin()],
@@ -28,9 +28,11 @@ const config: webpack.Configuration = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({
-      eslint: true
-    })
-  ]
-};
+      eslint: {
+        files: './src/**/*.{ts,js}',
+      },
+    }),
+  ],
+}
 
-export default config;
+export default config
